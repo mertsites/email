@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpagina met e-mail notificatie</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welkom op mijn website</h1>
+
+    <script>
+        // JavaScript-code hier
+    </script>
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "GET") {
+        $to_email = "merterdogan54321@gmail.com";
+        $subject = "Website geopend";
+        $message = "Iemand heeft je website geopend.";
+        $headers = "From: merterdogan54321";
+
+        // Stuur de e-mail
+        mail(merterdogan54321, $subject, $message, $headers);
+        echo "<p>E-mail is verzonden naar merterdogan54321.</p>";
+    }
+    ?>
+</body>
+</html 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+>
